@@ -20,10 +20,10 @@ int main(void)
     binary_tree_print(root);
 
     nodes = binary_tree_nodes(root);
-    printf("Nodes in %d: %lu\n", root->n, nodes);
+    printf("Nodes in %d: %lu\n", root->n, (unsigned long int)nodes);
     nodes = binary_tree_nodes(root->right);
-    printf("Nodes in %d: %lu\n", root->right->n, nodes);
+    printf("Nodes in %d: %lu\n", root->right->n, (unsigned long int)nodes);
     nodes = binary_tree_nodes(root->left->right);
-    printf("Nodes in %d: %lu\n", root->left->right->n, nodes);
+    printf("Nodes in %d: %lu\n", root->left->right->n, (unsigned long int)nodes);
     return (0);
 }
