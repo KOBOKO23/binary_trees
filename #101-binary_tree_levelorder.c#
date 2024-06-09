@@ -4,6 +4,7 @@
 void enqueue(Queue_t *queue, binary_tree_t *treeNode);
 binary_tree_t *dequeue(Queue_t *queue);
 void freeQueue(Queue_t *queue);
+
 /**
  * binary_tree_levelorder - traverse the tree in post order
  * @tree: the root of the tree
@@ -11,12 +12,12 @@ void freeQueue(Queue_t *queue);
  */
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 {
-	Queue_t *queue = NULL;
+	Queue *queue = NULL;
 	binary_tree_t *current;
 
 	if (tree == NULL || func == NULL)
 		return;
-	queue = (Queue_t *)malloc(sizeof(Queue_t));
+	queue = (Queue_node *)malloc(sizeof(Queue_t));
 	queue->front = queue->rear = NULL;
 
 	enqueue(queue, (binary_tree_t *)tree);
